@@ -1,0 +1,25 @@
+@import "tailwindcss"
+
+/* Basic responsive helpers */
+img { max-width: 100%; height: auto; display: block; }
+body { overflow-x: hidden; }
+input[type="email"], button { box-sizing: border-box; }
+
+/* Fallback adjustments for heavy fixed paddings/gaps used in the original markup */
+@media (max-width: 1024px) {
+	[class*="px-[144px]"] { padding-left: 1rem !important; padding-right: 1rem !important; }
+	[class*="px-[165px]"] { padding-left: 1rem !important; padding-right: 1rem !important; }
+	[class*="px-[105px]"] { padding-left: 1rem !important; padding-right: 1rem !important; }
+}
+
+@media (max-width: 768px) {
+	[class*="gap-[120px]"] { gap: 1rem !important; }
+	[class*="gap-[127.5px]"] { gap: 1rem !important; }
+	[class*="gap-[204px]"] { gap: 1rem !important; }
+	[class*="gap-[49.47px]"] { gap: .75rem !important; }
+	[class*="px-[144px]"] { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+	.flex.justify-between.items-center { flex-wrap: wrap; }
+	.flex.justify-between.items-center .text-sm { width: 100%; order: 3; margin-top: .5rem; display: flex; justify-content: center; gap: .75rem; }
+	.flex.justify-between.items-center .flex.gap-[8px] { order: 1; }
+	.flex.justify-between.items-center .flex.items-center { order: 2; }
+}
